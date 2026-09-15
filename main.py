@@ -6,19 +6,14 @@ from scripts.preprocessamento import (
 
 from scripts.visualizacao import grafico_serie_temporal
 
-# Caminho da base
 CAMINHO = "dados/shop-sales-data.csv"
 
-# Carregamento
 df = carregar_dados(CAMINHO)
 
-# Tratamento
 df = criar_coluna_data(df)
 
-# Série temporal
 serie = construir_serie_temporal(df)
 
-# Gráfico
 grafico_serie_temporal(serie)
 
 print("Gráfico salvo com sucesso na pasta outputs.")
@@ -29,33 +24,33 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 from statsmodels.tsa.seasonal import seasonal_decompose
 
+from scripts.analise import decompor_serie
 
-def decompor_serie(serie):
-    """
-    Realiza a decomposição da série temporal e salva o gráfico.
-    """
+resultado = decompor_serie(serie)
 
-    pasta_saida = Path("outputs/graficos")
-    pasta_saida.mkdir(parents=True, exist_ok=True)
+print("Decomposição concluída.")
 
-    serie_ts = serie.set_index("date")["sales_qty"]
+from scripts.analise import (
+    decompor_serie,
+    grafico_tendencia,
+    grafico_sazonalidade
+)
+resultado = decompor_serie(serie)
 
-    resultado = seasonal_decompose(
-        serie_ts,
-        model="additive",
-        period=12
-    )
+grafico_tendencia(resultado)
+grafico_sazonalidade(resultado)
 
-    fig = resultado.plot()
-    fig.set_size_inches(14, 10)
+print("Análises de tendência e sazonalidade concluídas.")
 
-    plt.tight_layout()
+from scripts.analise import (
+    decompor_serie,
+    grafico_tendencia,
+    grafico_sazonalidade,
+    grafico_acf,
+    grafico_pacf
+)
 
-    plt.savefig(
-        pasta_saida / "decomposicao.png",
-        dpi=300
-    )
+grafico_acf(serie)
+grafico_pacf(serie)
 
-    plt.close()
-
-    return resultado
+print("Análises de ACF e PACF concluídas.")
