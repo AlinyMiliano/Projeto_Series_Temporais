@@ -54,3 +54,16 @@ grafico_acf(serie)
 grafico_pacf(serie)
 
 print("Análises de ACF e PACF concluídas.")
+
+from scripts.analise import (
+    decompor_serie,
+    grafico_tendencia,
+    grafico_sazonalidade,
+    grafico_acf,
+    grafico_pacf,
+    teste_estacionariedade
+)
+
+resultado_adf = teste_estacionariedade(serie)
+
+print("Teste de estacionariedade concluído.")

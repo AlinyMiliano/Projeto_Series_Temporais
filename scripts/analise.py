@@ -3,6 +3,7 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 from statsmodels.tsa.seasonal import seasonal_decompose
 from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
+from statsmodels.tsa.stattools import adfuller
 
 def decompor_serie(serie):
     pasta_saida = Path("outputs/graficos")
@@ -83,7 +84,6 @@ def grafico_sazonalidade(resultado):
 
     plt.close()
     
-    from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
 
 
 def grafico_acf(serie):
@@ -144,3 +144,44 @@ def grafico_pacf(serie):
 
     plt.close()
     
+def teste_estacionariedade(serie):
+    
+    pasta_saida = Path("outputs")
+    pasta_saida.mkdir(parents=True, exist_ok=True)
+
+    serie_ts = serie.set_index("date")["sales_qty"]
+
+    resultado = adfuller(serie_ts)
+
+    estatistica_adf = resultado[0]
+    p_valor = resultado[1]
+    valores_criticos = resultado[4]
+
+    caminho_saida = pasta_saida / "teste_estacionariedade.txt"
+
+    with open(caminho_saida, "w", encoding="utf-8") as arquivo:
+        arquivo.write("TESTE DE ESTACIONARIEDADE - ADF\n")
+        arquivo.write("=" * 40 + "\n\n")
+
+        arquivo.write(f"Estatística ADF: {estatistica_adf:.6f}\n")
+        arquivo.write(f"p-valor: {p_valor:.6f}\n\n")
+
+        arquivo.write("Valores críticos:\n")
+
+        for nivel, valor in valores_criticos.items():
+            arquivo.write(f"{nivel}: {valor:.6f}\n")
+
+        arquivo.write("\nInterpretação:\n")
+
+        if p_valor <= 0.05:
+            arquivo.write(
+                "A série apresenta evidências de estacionariedade "
+                "ao nível de significância de 5%.\n"
+            )
+        else:
+            arquivo.write(
+                "A série não apresenta evidências suficientes de "
+                "estacionariedade ao nível de significância de 5%.\n"
+            )
+
+    return resultado   
