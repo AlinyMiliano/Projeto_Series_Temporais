@@ -1,0 +1,13 @@
+TESTE DE ESTACIONARIEDADE - ADF APÓS DIFERENCIAÇÃO REGULAR E SAZONAL
+============================================================
+
+Estatística ADF: -5.728820
+p-valor: 0.000001
+
+Valores críticos:
+1%: -3.626652
+5%: -2.945951
+10%: -2.611671
+
+Interpretação:
+A série apresenta evidências de estacionariedade ao nível de significância de 5% após a diferenciação regular e sazonal.

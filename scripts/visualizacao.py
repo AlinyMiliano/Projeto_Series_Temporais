@@ -13,7 +13,7 @@ def grafico_serie_temporal(serie):
         linewidth=2
     )
 
-    plt.title("projeto_series_temporais")
+    plt.title("Serie Temporal das Vendas")
     plt.xlabel("Data")
     plt.ylabel("Quantidade Vendida")
 

@@ -1,0 +1,8 @@
+VALIDAÇÃO DO MODELO SARIMA
+==================================================
+
+Modelo: SARIMA(0,1,0)(1,1,0,12)
+Período de teste: 12 meses
+
+MAE: 9427189.04
+RMSE: 14286833.78

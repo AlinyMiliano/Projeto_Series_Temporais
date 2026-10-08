@@ -1,0 +1,13 @@
+TESTE DE ESTACIONARIEDADE - ADF APÓS PRIMEIRA DIFERENCIAÇÃO
+==================================================
+
+Estatística ADF: -1.897933
+p-valor: 0.333034
+
+Valores críticos:
+1%: -3.615509
+5%: -2.941262
+10%: -2.609200
+
+Interpretação:
+A série diferenciada não apresenta evidências suficientes de estacionariedade ao nível de significância de 5%.

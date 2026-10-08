@@ -1,0 +1,47 @@
+ANÁLISE ACF E PACF - SÉRIE ESTACIONÁRIA
+=======================================================
+
+Lags analisados: 0 a 18
+Nível de significância: 5%
+
+ACF - Autocorrelação
+------------------------------
+Lag  1: ACF = -0.2908 | Significativo: Não
+Lag  2: ACF = -0.1131 | Significativo: Não
+Lag  3: ACF = -0.0343 | Significativo: Não
+Lag  4: ACF = 0.1305 | Significativo: Não
+Lag  5: ACF = 0.0118 | Significativo: Não
+Lag  6: ACF = 0.0230 | Significativo: Não
+Lag  7: ACF = 0.0239 | Significativo: Não
+Lag  8: ACF = -0.1920 | Significativo: Não
+Lag  9: ACF = 0.0893 | Significativo: Não
+Lag 10: ACF = 0.0820 | Significativo: Não
+Lag 11: ACF = -0.1860 | Significativo: Não
+Lag 12: ACF = 0.0485 | Significativo: Não
+Lag 13: ACF = -0.0452 | Significativo: Não
+Lag 14: ACF = -0.0158 | Significativo: Não
+Lag 15: ACF = 0.0148 | Significativo: Não
+Lag 16: ACF = -0.0302 | Significativo: Não
+Lag 17: ACF = 0.0439 | Significativo: Não
+Lag 18: ACF = -0.0053 | Significativo: Não
+
+PACF - Autocorrelação Parcial
+------------------------------
+Lag  1: PACF = -0.2908 | Significativo: Não
+Lag  2: PACF = -0.2159 | Significativo: Não
+Lag  3: PACF = -0.1570 | Significativo: Não
+Lag  4: PACF = 0.0480 | Significativo: Não
+Lag  5: PACF = 0.0598 | Significativo: Não
+Lag  6: PACF = 0.0960 | Significativo: Não
+Lag  7: PACF = 0.1103 | Significativo: Não
+Lag  8: PACF = -0.1652 | Significativo: Não
+Lag  9: PACF = -0.0380 | Significativo: Não
+Lag 10: PACF = 0.0324 | Significativo: Não
+Lag 11: PACF = -0.2027 | Significativo: Não
+Lag 12: PACF = -0.0162 | Significativo: Não
+Lag 13: PACF = -0.0917 | Significativo: Não
+Lag 14: PACF = -0.0956 | Significativo: Não
+Lag 15: PACF = 0.0234 | Significativo: Não
+Lag 16: PACF = -0.0838 | Significativo: Não
+Lag 17: PACF = 0.0648 | Significativo: Não
+Lag 18: PACF = 0.0867 | Significativo: Não

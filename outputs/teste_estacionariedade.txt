@@ -1,0 +1,13 @@
+TESTE DE ESTACIONARIEDADE - ADF
+========================================
+
+Estatística ADF: -1.895659
+p-valor: 0.334106
+
+Valores críticos:
+1%: -3.610400
+5%: -2.939109
+10%: -2.608063
+
+Interpretação:
+A série não apresenta evidências suficientes de estacionariedade ao nível de significância de 5%.

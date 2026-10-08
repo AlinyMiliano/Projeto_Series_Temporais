@@ -1,0 +1,14 @@
+DIAGNÓSTICO DOS RESÍDUOS - SARIMA
+============================================================
+
+Modelo: SARIMA(0,1,0)(1,1,0,12)
+
+TESTE DE LJUNG-BOX
+------------------------------------------------------------
+      lb_stat  lb_pvalue
+12  12.045899   0.442000
+18  12.367013   0.827722
+
+Interpretação:
+p-valor > 0,05: não há evidência de autocorrelação significativa nos resíduos.
+p-valor <= 0,05: há evidência de autocorrelação nos resíduos.
